@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Генератор бизнес-идей</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Генератор бизнес-идей</h1>
+
+    <form id="idea-form">
+        <label for="niche">Ниша / отрасль</label>
+        <input type="text" id="niche" name="niche" placeholder="Например: доставка еды, EdTech, экотовары" required>
+
+        <label for="region">Регион / рынок (опционально)</label>
+        <input type="text" id="region" name="region" placeholder="Например: Россия, СНГ, глобальный">
+
+        <button type="submit" id="submit-btn">Исследовать рынок</button>
+    </form>
+
+    <div id="status" class="status"></div>
+
+    <div class="panels">
+        <div class="panel">
+            <h2>Лог шагов</h2>
+            <div id="log" class="log"></div>
+        </div>
+        <div class="panel">
+            <h2>Финальный отчёт</h2>
+            <div id="report" class="report"></div>
+            <button id="download-md" class="secondary-btn" disabled>Скачать в Markdown</button>
+        </div>
+    </div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
+

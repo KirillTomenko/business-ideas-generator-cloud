@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vc03-backend
+    env_file:
+      - .env
+    environment:
+      - PROXY_API_URL=${PROXY_API_URL}
+      - PROXY_API_KEY=${PROXY_API_KEY}
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
